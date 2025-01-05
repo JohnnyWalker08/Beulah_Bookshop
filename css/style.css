@@ -9946,3 +9946,58 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+    .search-container {
+      margin: 20px 0;
+    }
+    
+    #searchBar {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    #searchResults {
+      margin-top: 10px;
+    }
+
+    #searchResults {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 100%;
+      padding: 15px;
+      position: absolute;
+      z-index: 1000;
+      width: 100%;
+    }
+    
+    #searchResults p {
+      margin: 10px 0;
+      padding: 5px 0;
+      font-size: 16px;
+      border-bottom: 1px solid #f0f0f0;
+      color: black;
+    }
+    
+    #searchResults p:last-child {
+      border-bottom: none;
+    }
+    
+    #searchResults a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    
+    #searchResults a:hover {
+      text-decoration: underline;
+    }
+    
+    .search-container {
+      position: relative;
+      max-width: 600px;
+      margin: 0 auto;
+    }    

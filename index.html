@@ -1,9 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Beulah Bookshop - index</title>
+    <title>Beulah Bookshop - Textbooks, Notebooks, and Stationery Supplies</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Welcome to Beulah Bookshop, your go-to destination for all educational supplies, including textbooks, notebooks, and stationery. Shop now to fuel your learning and creativity.">
+    <meta name="description" content="Get in touch with Beulah Bookshop for inquiries about our products, services, or orders. Visit our store or contact us online.">
+    <meta name="keywords" content="Beulah Bookshop contact, bookstore contact, stationery inquiries, textbook shop">    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Beulah Bookshop">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="description" content="Explore our extensive collection of school textbooks, storybooks, and educational resources. Beulah Bookshop has everything you need for learning.">
+    <meta name="keywords" content="school textbooks, storybooks, educational books, bookstore, buy books online">
+    <meta name="description" content="Discover insightful articles, tips, and guides on education, stationery, and productivity on the Beulah Bookshop blog. Stay informed and inspired!">
+    <meta name="keywords" content="education tips, stationery blog, productivity hacks, learning tips">
+    <meta name="description" content="{{Post Excerpt}}">
+    <meta name="keywords" content="{{Keywords Related to Post}}">
+    <meta name="description" content="Learn more about Beulah Bookshop, our mission, and our dedication to providing quality educational supplies for students and professionals.">
+    <meta name="keywords" content="about Beulah Bookshop, our mission, educational supplies, bookstore history">
+    
+      
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Beulah Bookshop - Your Trusted Partner for Textbooks and Stationery">
+    <meta property="og:description" content="Find a wide range of school textbooks, notebooks, and stationery supplies to fuel your learning and creativity.">
+    <meta property="og:image" content="https://example.com/your-hero-image.jpg">
+    <meta property="og:url" content="https://github.com/JohnnyWalker08/Beulah_Bookshop">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Beulah Bookshop">
+    <meta name="twitter:description" content="Your one-stop shop for textbooks, notebooks, and stationery.">
+    <meta name="twitter:image" content="https://example.com/your-hero-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://github.com/JohnnyWalker08/Beulah_Bookshop">
+
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
 
@@ -48,8 +83,7 @@
 	      </div>
 	    </div>
 	  </nav>
-    <!-- END nav -->
-    
+
     <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/option_2.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
@@ -58,19 +92,128 @@
           	<div class="text w-100 text-center mb-md-5 pb-md-5">
 	            <h1 class="mb-4" style="text-shadow: 2px 2px 5px; rgba(0, 0, 0.5); font-weight: bold; font-size: 3rem;">Everything you Need: Textbooks, Notebooks, Stationaries, and Other Supplies</h1>
 	            <p style="font-size: 18px;">From School textbooks and captivating stories to essential stationery, Beulah Bookshop is your trusted patner for learning and creativity </p>
-	            <a href="https://vimeo.com/45830194" class="icon-wrap popup-vimeo d-flex align-items-center mt-4 justify-content-center">
-	            	<div class="icon d-flex align-items-center justify-content-center">
-	            		<span class="ion-ios-play"></span>
-	            	</div>
-	            	<div class="heading-title ml-5">
-		            	<span>Easy steps for renting a car</span>
-	            	</div>
-	            </a>
+	            <a href="./Books.html"><button style="background-color: #3498db; color: white; padding: 0.8rem 2rem; border-radius: 25px; border: none; font-size: 1rem; cursor: pointer; transition: all 0.3s ease;" 
+                onmouseover="this.style.backgroundColor='#2980b9'; this.style.transform='scale(1.05)';" 
+                onmouseout="this.style.backgroundColor='#3498db'; this.style.transform='scale(1)';">Browse Books</button></a>
             </div>
-          </div>
+             <style>
+    /* Search Bar Styles */
+    .search-container {
+      position: relative;
+      width: 300px;
+    }
+
+    #search-input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+
+    #search-btn {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-icon {
+      font-size: 20px;
+    }
+
+    /* Search Results Styles */
+    #search-results {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Search Bar HTML -->
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Search for books..." />
+    <button id="search-btn">
+      <i class="search-icon">🔍</i>  <!-- Search icon -->
+    </button>
+  </div>
+
+  <!-- Search Results Container -->
+  <div id="search-results"></div>
+
+  <!-- JavaScript -->
+  <script>
+    // Example list of books
+    const books = [
+      { title: "The Great Gatsby", author: "F. Scott Fitzgerald" },
+      { title: "1984", author: "George Orwell" },
+      { title: "To Kill a Mockingbird", author: "Harper Lee" },
+      { title: "Moby Dick", author: "Herman Melville" }
+    ];
+
+    // Get DOM elements
+    const searchInput = document.getElementById("search-input");
+    const searchButton = document.getElementById("search-btn");
+
+    // Function to search books
+    function searchBooks(query) {
+      const results = books.filter(book => 
+        book.title.toLowerCase().includes(query.toLowerCase())
+      );
+      
+      displayResults(results);
+    }
+
+    // Function to display search results
+    function displayResults(results) {
+      const resultContainer = document.getElementById("search-results");
+      resultContainer.innerHTML = ''; // Clear previous results
+
+      if (results.length === 0) {
+        resultContainer.innerHTML = "No books found.";
+        return;
+      }
+
+      results.forEach(book => {
+        const bookElement = document.createElement('div');
+        bookElement.textContent = `${book.title} by ${book.author}`;
+        resultContainer.appendChild(bookElement);
+      });
+    }
+
+    // Trigger search when the search button is clicked
+    searchButton.addEventListener("click", function() {
+      const query = searchInput.value.trim();
+      if (query) {
+        searchBooks(query);
+      }
+    });
+
+    // Trigger search when the user presses "Enter"
+    searchInput.addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        const query = searchInput.value.trim();
+        if (query) {
+          searchBooks(query);
+        }
+      }
+    });
+  </script>
+          </div> 
+          </div> 
         </div>
-      </div>
+        
     </div>
+    
+
+    <!-- Hero Section -->
+    
+  
+   
+    
+  <!-- END nav -->
 
      
     <section class="ftco-section ftco-no-pt bg-light">
@@ -100,41 +243,104 @@
     					</div>
     					<div class="item">
     						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-2.jpg);">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/Books/P_Sexual_Purity.jpg);">
 		    					</div>
 		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+		    						<h2 class="mb-0"><a href="#">Winning the Battle for Sexual Purity</a></h2>
 		    						<div class="d-flex mb-3">
-			    						<span class="cat">Cheverolet</span>
-			    						<p class="price ml-auto">$500 <span>/day</span></p>
+			    						<span class="cat">Samuel C. Bethel</span>
+			    						<p class="price ml-auto">N4000 <span>/pc</span></p>
 		    						</div>
 		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
 		    					</div>
 		    				</div>
-    					</div>
-    					<div class="item">
+    					</div><div class="item">
     						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-3.jpg);">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/Books/P_Sexual_Purity.jpg);">
 		    					</div>
 		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+		    						<h2 class="mb-0"><a href="#">Winning the Battle for Sexual Purity</a></h2>
 		    						<div class="d-flex mb-3">
-			    						<span class="cat">Cheverolet</span>
-			    						<p class="price ml-auto">$500 <span>/day</span></p>
+			    						<span class="cat">Samuel C. Bethel</span>
+			    						<p class="price ml-auto">N4000 <span>/pc</span></p>
 		    						</div>
 		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
 		    					</div>
 		    				</div>
-    					</div>
-    					<div class="item">
+    					</div><div class="item">
     						<div class="car-wrap rounded ftco-animate">
-		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/car-4.jpg);">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/Books/P_Sexual_Purity.jpg);">
 		    					</div>
 		    					<div class="text">
-		    						<h2 class="mb-0"><a href="#">Mercedes Grand Sedan</a></h2>
+		    						<h2 class="mb-0"><a href="#">Winning the Battle for Sexual Purity</a></h2>
 		    						<div class="d-flex mb-3">
-			    						<span class="cat">Cheverolet</span>
-			    						<p class="price ml-auto">$500 <span>/day</span></p>
+			    						<span class="cat">Samuel C. Bethel</span>
+			    						<p class="price ml-auto">N4000 <span>/pc</span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
+		    					</div>
+		    				</div>
+    					</div><div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/Books/P_Sexual_Purity.jpg);">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Winning the Battle for Sexual Purity</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Samuel C. Bethel</span>
+			    						<p class="price ml-auto">N4000 <span>/pc</span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
+		    					</div>
+		    				</div>
+    					</div><div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/Books/P_Sexual_Purity.jpg);">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Winning the Battle for Sexual Purity</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Samuel C. Bethel</span>
+			    						<p class="price ml-auto">N4000 <span>/pc</span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
+		    					</div>
+		    				</div>
+    					</div><div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/Books/P_Sexual_Purity.jpg);">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Winning the Battle for Sexual Purity</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Samuel C. Bethel</span>
+			    						<p class="price ml-auto">N4000 <span>/pc</span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
+		    					</div>
+		    				</div>
+    					</div><div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/Books/P_Sexual_Purity.jpg);">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Winning the Battle for Sexual Purity</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Samuel C. Bethel</span>
+			    						<p class="price ml-auto">N4000 <span>/pc</span></p>
+		    						</div>
+		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
+		    					</div>
+		    				</div>
+    					</div><div class="item">
+    						<div class="car-wrap rounded ftco-animate">
+		    					<div class="img rounded d-flex align-items-end" style="background-image: url(images/Books/P_Sexual_Purity.jpg);">
+		    					</div>
+		    					<div class="text">
+		    						<h2 class="mb-0"><a href="#">Winning the Battle for Sexual Purity</a></h2>
+		    						<div class="d-flex mb-3">
+			    						<span class="cat">Samuel C. Bethel</span>
+			    						<p class="price ml-auto">N4000 <span>/pc</span></p>
 		    						</div>
 		    						<p class="d-flex mb-0 d-block"><a href="#" class="btn btn-primary py-2 mr-1">Book now</a> <a href="#" class="btn btn-secondary py-2 ml-1">Details</a></p>
 		    					</div>
@@ -233,10 +439,10 @@
          #about-us ul {
             padding-left: 20px;
          }
+         
       }
+      
    </style>
-   
-   
    
 		<section class="ftco-section">
 			<div class="container">
@@ -289,19 +495,7 @@
 			</div>
 		</section>
 
-		<section class="ftco-section ftco-intro" style="background-image: url(images/bg_3.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row justify-content-end">
-					<div class="col-md-6 heading-section heading-section-white ftco-animate">
-            <h2 class="mb-3">Discover the Joy of reading. Need help finding a Book? let us assist you!.</h2>
-            <a href="./Books.html" class="btn btn-primary btn-lg">Shop Now</a>
-          </div>
-				</div>
-			</div>
-		</section>
-
-
+     
     <section class="ftco-section testimony-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5">
@@ -441,7 +635,7 @@
           <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text text-border d-flex align-items-center">
-                <strong class="number" data-number="25">0</strong>
+                <strong class="number" data-number="15">0</strong>
                 <span>Year <br>Experience</span>
               </div>
             </div>
@@ -465,7 +659,7 @@
           <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
             <div class="block-18">
               <div class="text d-flex align-items-center">
-                <strong class="number" data-number="5">0</strong>
+                <strong class="number" data-number="3">0</strong>
                 <span>Total <br>Branches</span>
               </div>
             </div>
@@ -559,6 +753,14 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="./js/TESTING.JS"></script>
+
+  <script type="application/ld+json">
+    
+    
+  </script>
+    
+    
 
   
   </body>
